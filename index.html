@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+    <title>Masonry Flexbox</title>
+</head>
+<style>
+    /* Reset CSS */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: "Poppins", sans-serif;
+        background: #f3f3f3;
+        color: #333;
+    }
+
+    /* Image Styling */
+    .images{
+        width: 100%;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Flexbox Styling */
+
+    .header{
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .flexbox-container-row{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0.5rem;
+    }
+
+    .flexbox-container-columns{
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 0.5rem;
+    }
+
+    .flexbox-container-columns .images{
+        margin-top: 1rem;
+        vertical-align: middle;
+    }
+
+    @media (max-width: 800px){
+        .flexbox-container-columns{
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 600px){
+        .flexbox-container-columns{
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+
+</style>
+<body>
+    <header class="header">
+        <h1>Masonry Flexbox Responsivo</h1>
+    </header>
+    <section class="flexbox-container-row">
+        <div class="flexbox-container-columns">
+            <img class="images" src="./picture (1).jpg">
+            <img class="images" src="./picture (2).jpg">
+            <img class="images" src="./picture (3).jpg">
+            <img class="images" src="./picture (4).jpg">
+            <img class="images" src="./picture (5).jpg">
+            <img class="images" src="./picture (6).jpg">
+        </div>
+
+        <div class="flexbox-container-columns">
+            <img class="images" src="./picture (4).jpg">
+            <img class="images" src="./picture (6).jpg">
+            <img class="images" src="./picture (3).jpg">
+            <img class="images" src="./picture (5).jpg">
+            <img class="images" src="./picture (1).jpg">
+            <img class="images" src="./picture (2).jpg">
+        </div>
+
+        <div class="flexbox-container-columns">
+            <img class="images" src="./picture (3).jpg">
+            <img class="images" src="./picture (1).jpg">
+            <img class="images" src="./picture (2).jpg">
+            <img class="images" src="./picture (4).jpg">
+            <img class="images" src="./picture (6).jpg">
+            <img class="images" src="./picture (5).jpg">
+        </div>
+
+        <div class="flexbox-container-columns">
+            <img class="images" src="./picture (2).jpg">
+            <img class="images" src="./picture (3).jpg">
+            <img class="images" src="./picture (4).jpg">
+            <img class="images" src="./picture (5).jpg">
+            <img class="images" src="./picture (6).jpg">
+            <img class="images" src="./picture (1).jpg">
+        </div>
+    </section>
+</body>
+</html>
